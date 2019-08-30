@@ -1,0 +1,63 @@
+// Default mixins and settings -----------------
+@import "../../css/theme/template/mixins";
+@import "../../css/theme/template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+$primary-color: #29A583;
+$white: mix($primary-color, #FFFFFF, 10%);
+
+$grey-light: mix($primary-color, #999999, 10%);
+$grey: mix($primary-color, #666666, 10%);
+$grey-dark: mix($primary-color, #333333, 10%);
+
+$black: mix($primary-color, #000000, 10%);
+
+@mixin css-var($prop: null, $value: null) {
+  @if ($prop and $value) {
+    #{$prop}: $value;
+  }
+}
+
+:root {
+  @include css-var(--primary-color, $primary-color);
+  @include css-var(--white, $white);
+  @include css-var(--grey-light, $grey-light);
+  @include css-var(--grey, $grey);
+  @include css-var(--grey-dark, $grey-dark);
+  @include css-var(--black, $black);
+}
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $black;
+
+$mainColor: $white;
+$headingColor: $white;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: $primary-color;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
+
+
+// Theme template ------------------------------
+@import "../../css/theme/template/theme";
+// ---------------------------------------------

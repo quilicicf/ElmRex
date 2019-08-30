@@ -1,0 +1,24 @@
+.quote {
+  .quote-content::before {
+    content: '“';
+  }
+
+  .quote-content::after {
+    content: '”';
+  }
+
+  .quote-source::before {
+    content: '-';
+    color: var(--grey);
+  }
+
+  .quote-source {
+    font-size: .7em;
+    filter: brightness(80%);
+  }
+
+  .quote-author {
+    font-size: .7em;
+    color: var(--grey);
+  }
+}

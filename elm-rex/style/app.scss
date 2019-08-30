@@ -1,0 +1,30 @@
+@import './theme';
+@import './quotes';
+// Slides
+@import 'slides/title';
+@import 'slides/compiles-to-js';
+
+@font-face {
+  font-family: fira;
+  src: local("Fira Code");
+}
+
+@mixin fira {
+  //noinspection CssNoGenericFontName
+  font-family: fira;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: normal;
+}
+
+pre > code[class*="language-"] {
+  @include fira;
+  font-size: .7rem;
+}
+
+.speaker-controls-notes {
+  @include fira;
+}
+
+html {
+  color: var(--white);
+}

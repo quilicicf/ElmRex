@@ -1,0 +1,23 @@
+.layout-title {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .logo {
+    --size: 4.5rem;
+    height: var(--size);
+    width: var(--size);
+    margin-right: 1rem;
+    border: none;
+    background-color: unset;
+  }
+
+  .sub-title {
+    font-size: .6em;
+    color: $grey;
+  }
+}

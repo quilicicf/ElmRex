@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>ELM Rex</title>
+
+  <!--  <link rel="stylesheet" href="../css/reset.css">-->
+  <link rel="stylesheet" href="../css/reveal.css">
+
+  <link rel="stylesheet" href="prism/prism.css">
+  <link rel="stylesheet" href="dist/app.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[ 0 ].appendChild(link);
+  </script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section class="layout-title">
+      <h1 class="header">
+        <img class="logo" src="./assets/elm_logo.svg" alt="Elm logo">
+        <span>Elm Rex</span>
+      </h1>
+      <p class="sub-title">An experience with mixed results</p>
+    </section>
+    <section class="plan">
+      <h1>Plan</h1>
+      <ul>
+        <li class="fragment fade-in-then-semi-out">What is Elm</li>
+        <li class="fragment fade-in-then-semi-out">The app</li>
+        <li class="fragment fade-in-then-semi-out">How Elm fares</li>
+        <li class="fragment fade-in">Q/A</li>
+      </ul>
+    </section>
+    <section class="what-is-elm">
+      <section class="compiles-to-js">
+        <h1>Elm Compiles to JS</h1>
+        <div class="content">
+          <img class="logo" src="./assets/elm_logo.svg" alt="Elm logo">
+          <div class="big-ass-arrow"></div>
+          <img class="logo" src="assets/js_logo.svg" alt="Elm logo">
+        </div>
+        <aside class="notes">
+          <h2>Elm is a language to write front-end applications</h2>
+          <h2>Compiles to ES3</h2>
+        </aside>
+      </section>
+      <section class="functional-language">
+        <h1>A functional language</h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Functions are idempotent</li>
+          <li class="fragment fade-in-then-semi-out">No side-effects</li>
+          <li class="fragment fade-in">No runtime errors</li>
+          <li class="fragment fade-in">A helpful compiler</li>
+          <li class="fragment fade-in-then-semi-out">Functions are curry-able</li>
+        </ul>
+        <aside class="notes">
+          <h2>Idem potency: given same args => same results</h2>
+          <h2>No global state + pure functions + immutable data => no side-effects</h2>
+          <h2>If it compiles, it runs</h2>
+          <h2>The compiler knows lots about your program</h2>
+          <h2>Currying => composition</h2>
+        </aside>
+      </section>
+      <section class="currying">
+        <h1>Currying</h1>
+        <p class="quote">
+          <span class="quote-content">
+            Currying is the process of translating the evaluation of a function that takes multiple arguments
+            into evaluating a sequence of functions, each with a single argument.
+          </span>
+          <a class="quote-source" href="https://en.wikipedia.org/wiki/Currying">Source</a>
+          <span class="quote-author">Wikipedia</span>
+        </p>
+        <pre>
+          <code class="language-elm">
+            <span class="fragment fade-in-then-semi-out">add : Int -> Int -> Int</span>
+            <span class="fragment fade-in-then-semi-out">add number1 number2 = number1 + number2</span>
+          </code>
+        </pre>
+      </section>
+    </section>
+    <section>
+      <h1>What is Elm</h1>
+      <ul>
+        <li>A delightful language for reliable webapps</li>
+        <li>Compiles to ES3</li>
+        <li>Cohesive</li>
+        <li>Flux pattern</li>
+        <li>Functional</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../js/reveal.js"></script>
+<script src="prism/prism.js"></script>
+
+<script>
+  Reveal.initialize({
+    controlsTutorial: false,
+    slideNumber: 'c/t',
+    hash: true,
+    transition: 'convex',
+    transitionSpeed: 'fast',
+    defaultTiming: 120,
+    dependencies: [
+      { src: '../plugin/notes/notes.js', async: true },
+    ]
+  });
+</script>
+</body>
+</html>
