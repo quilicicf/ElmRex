@@ -53,22 +53,40 @@
           <h2>Compiles to ES3</h2>
         </aside>
       </section>
+      <section class="comprehensive">
+        <h1>Comprehensive</h1>
+        <div class="two-columns">
+          <img src="./assets/choices_stack_js.png" alt="Choices to do in JS" class="column second-column fragment fade-in">
+          <img src="./assets/choices_stack_elm.png" alt="Choices to do in elm" class="column first-column fragment fade-in">
+        </div>
+      </section>
       <section class="functional-language">
         <h1>A functional language</h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">Functions are idempotent</li>
           <li class="fragment fade-in-then-semi-out">No side-effects</li>
-          <li class="fragment fade-in">No runtime errors</li>
-          <li class="fragment fade-in">A helpful compiler</li>
+          <li class="fragment fade-in-then-semi-out">No runtime errors</li>
+          <li class="fragment fade-in-then-semi-out">Semver is imposed</li>
+          <li class="fragment fade-in-then-semi-out">A helpful compiler</li>
           <li class="fragment fade-in-then-semi-out">Functions are curry-able</li>
         </ul>
         <aside class="notes">
           <h2>Idem potency: given same args => same results</h2>
           <h2>No global state + pure functions + immutable data => no side-effects</h2>
           <h2>If it compiles, it runs</h2>
+          <h2>Strong type system => the compiler discovers semver info on its own</h2>
           <h2>The compiler knows lots about your program</h2>
           <h2>Currying => composition</h2>
         </aside>
+      </section>
+      <section class="helpful-compiler">
+        <h1>Helpful compiler</h1>
+        <div>
+          <img src="./assets/helpful_compiler.png" alt="Helpful compiler error messages">
+        </div>
+        <div>
+          <img src="./assets/helpful_compiler_2.png" alt="Helpful compiler error messages 2">
+        </div>
       </section>
       <section class="currying">
         <h1>Currying</h1>
@@ -80,23 +98,134 @@
           <a class="quote-source" href="https://en.wikipedia.org/wiki/Currying">Source</a>
           <span class="quote-author">Wikipedia</span>
         </p>
+      </section>
+      <section class="currying-2">
+        <h1>Currying</h1>
         <pre>
           <code class="language-elm">
             <span class="fragment fade-in-then-semi-out">add : Int -> Int -> Int</span>
             <span class="fragment fade-in-then-semi-out">add number1 number2 = number1 + number2</span>
+
+            <span class="fragment fade-in-then-semi-out">-- Let's curry it!</span>
+
+            <span class="fragment fade-in-then-semi-out">add5 : Int -> Int</span>
+            <span class="fragment fade-in-then-semi-out">add5 value = value + 5</span>
+
+            <span class="fragment fade-in-then-semi-out">-- Let's use it now!</span>
+
+            <span class="fragment fade-in-then-semi-out">marks : List Int</span>
+            <span class="fragment fade-in-then-semi-out">bumpedMarks = List.map add5 marks</span>
+
+            <span class="fragment fade-in-then-semi-out">add5 = (+) 5</span>
+            <span class="fragment fade-in-then-semi-out">bumpedMarks = List.map ( (+) 5 ) marks</span>
           </code>
         </pre>
       </section>
+      <section class="currying-3">
+        <h1>Currying - real example</h1>
+        <pre>
+          <code class="language-elm">
+            coeff : Float
+            coeff = List.repeat precision "0"
+              |> String.join ""
+              |> (++) "1"
+              |> String.toFloat
+              |> Maybe.withDefault 1.0
+          </code>
+        </pre>
+      </section>
+      <section class="type-system">
+        <h1>A sound type-system</h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Strong: the type is always known</li>
+          <li class="fragment fade-in-then-semi-out">Structural: the type is defined by it's structure</li>
+          <li class="fragment fade-in-then-semi-out">No null: places where values can be missing are known</li>
+          <li class="fragment fade-in">Implicit OR explicit: whatever fits the local needs</li>
+        </ul>
+      </section>
+      <section class="records">
+        <h1>Records</h1>
+        <pre>
+          <code class="language-elm">
+            <span class="fragment fade-in-then-semi-out">type alias Person = { name: String, dob: Date }</span>
+            <span class="fragment fade-in-then-semi-out">-- Explicit typing</span>
+            <span class="fragment fade-in-then-semi-out">getAge : Person -> Int</span>
+            <span class="fragment fade-in-then-semi-out">-- Implicit typing</span>
+            <span class="fragment fade-in-then-semi-out">getAge { dob } = ...</span>
+            <span class="fragment fade-in-then-semi-out">-- Semi-implicit typing</span>
+            <span class="fragment fade-in">getAge : { whatever | dob: Date }</span>
+          </code>
+        </pre>
+      </section>
+      <section class="union-types">
+        <h1>Union types</h1>
+        <pre>
+          <code class="language-elm">
+            type Sorting = Ascending String | Descending String | Randomized
+
+            case sorting of
+              Ascending column -> -- sort
+              Descending column -> -- sort
+              Randomized -> -- sort
+          </code>
+        </pre>
+      </section>
+      <section class="tuples">
+        <h1>Tuples</h1>
+        <pre>
+          <code class="language-elm">
+            findCrossingPoint : Line -> Line -> ( Int, Int )
+
+            point = findCrossingPoint line1 line2
+
+            abscissa = Tuple.first point
+          </code>
+        </pre>
+      </section>
+      <section class="maybe">
+        <h1>Maybe</h1>
+        <pre>
+          <code class="language-elm">
+            findCrossingPoint : Line -> Line -> Maybe ( Int, Int )
+
+            maybePoint = findCrossingPoint line1 line2
+
+            case maybePoint of
+              Just (abscissa, ordinate) -> -- do something
+              Nothing -> -- do something else
+          </code>
+        </pre>
+      </section>
+      <section class="flux">
+        <h1>The flux pattern</h1>
+        <p class="fragment fade-in">Was formerly known as <em>event sourcing</em> before Facebook "renamed" it.</p>
+        <p class="fragment fade-in">Uni-directional data flow</p>
+        <img class="fragment fade-in" src="./assets/flux.png" alt="Flux architecture">
+
+        <aside class="notes">
+          <h2>Virtual DOM</h2>
+        </aside>
+      </section>
+      <section class="recap-promises">
+        <h1>Recap of elm's promises</h1>
+        <ol>
+          <li class="fragment fade-in">No runtime errors</li>
+          <li class="fragment fade-in">Good performance</li>
+          <li class="fragment fade-in">Easy maintenance</li>
+          <li class="fragment fade-in">Easy debugging</li>
+          <li class="fragment fade-in">Enjoyable</li>
+        </ol>
+        <aside class="notes">
+          <h2>Performance => assets size + optimizations</h2>
+        </aside>
+      </section>
     </section>
     <section>
-      <h1>What is Elm</h1>
-      <ul>
-        <li>A delightful language for reliable webapps</li>
-        <li>Compiles to ES3</li>
-        <li>Cohesive</li>
-        <li>Flux pattern</li>
-        <li>Functional</li>
-      </ul>
+      <section class="the-app">
+        <h1>The app</h1>
+        <img src="./assets/the_app.png" alt="App overview" class="fragment fade-in">
+      </section>
+
     </section>
   </div>
 </div>
@@ -112,8 +241,12 @@
     transition: 'convex',
     transitionSpeed: 'fast',
     defaultTiming: 120,
+    width: 1920,
+    height: 1080,
+    zoomKey: 'shift',
     dependencies: [
       { src: '../plugin/notes/notes.js', async: true },
+      { src: '../plugin/zoom-js/zoom.js', async: true },
     ]
   });
 </script>

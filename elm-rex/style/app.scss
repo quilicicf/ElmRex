@@ -3,6 +3,7 @@
 // Slides
 @import 'slides/title';
 @import 'slides/compiles-to-js';
+@import 'slides/comprehensive';
 
 @font-face {
   font-family: fira;
@@ -18,7 +19,7 @@
 
 pre > code[class*="language-"] {
   @include fira;
-  font-size: .7rem;
+  font-size: 1.1rem;
 }
 
 .speaker-controls-notes {
