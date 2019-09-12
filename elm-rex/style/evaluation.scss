@@ -1,0 +1,11 @@
+.check::before {
+  content: '✓';
+  font-weight: bold;
+  color: green;
+}
+
+.cross::before {
+  content: '×';
+  font-weight: bold;
+  color: red;
+}

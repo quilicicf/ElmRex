@@ -225,7 +225,192 @@
         <h1>The app</h1>
         <img src="./assets/the_app.png" alt="App overview" class="fragment fade-in">
       </section>
+      <section class="app-demo">
+        <h1>Live demo!</h1>
+      </section>
+    </section>
+    <section>
+      <section class="evaluation-process">
+        <h1>Evaluation process</h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Language</li>
+          <li class="fragment fade-in-then-semi-out">Ecosystem</li>
+          <li class="fragment fade-in-then-semi-out">App needs</li>
+          <li class="fragment fade-in">My personal experience</li>
+        </ul>
+      </section>
+      <section class="evaluation-language">
+        <h1>Evaluation method - language</h1>
+        <table>
+          <thead>
+          <th>Criteria</th>
+          <th>Evaluated?</th>
+          </thead>
+          <tbody>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Syntax</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Productivity</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Upgrade-ability</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Readability</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Documentation</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Bundle size</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Cost of performance</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Debugging</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Tests</td>
+            <td><i class="cross"></i></td>
+          </tr>
+          </tbody>
+        </table>
 
+        <aside class="notes">
+          <h2>Warning: this part is mainly subjective</h2>
+        </aside>
+      </section>
+      <section class="evaluation-bundle-size">
+        <h1>Bundle size</h1>
+        <div class="comparison">
+          <div class="hello">
+            <h2>Hello world</h2>
+            <pre class="sub-title">~50LoC => 19K => 7K</pre>
+            <pre>
+              <code class="language-">
+                hello
+                ├── [103K]  app.js
+                ├── <strong style="color: var(--primary-color);">[ 19K]  app.min.js</strong>
+                ├── [7.2K]  app.min.js.gzip
+                ├── [ 233]  elm.json
+                ├── [ 275]  index.html
+                └── [1.0K]  Main.elm
+              </code>
+            </pre>
+          </div>
+          <div class="my-app">
+            <h2>ep-stats</h2>
+              <pre class="sub-title">~2500 + ~800LoC => 150K => 47K</pre>
+            <pre>
+              <code class="language-">
+                dist/
+                ├── [ 73K]  app.css
+                ├── [305K]  app.js
+                ├── <strong style="color: var(--primary-color);">[ 54K]  app.min.css</strong>
+                ├── [ 12K]  app.min.css.gzip
+                ├── <strong style="color: var(--primary-color);">[ 89K]  app.min.js</strong>
+                ├── [ 28K]  app.min.js.gzip
+                ├── [4.0K]  assets
+                │   ├── [130K]  fa-solid-900.eot
+                │   ├── [477K]  fa-solid-900.svg
+                │   ├── [130K]  fa-solid-900.ttf
+                │   ├── [ 62K]  fa-solid-900.woff
+                │   ├── [ 49K]  fa-solid-900.woff2
+                │   └── [ 791]  icon.png
+                └── [6.1K]  index.html
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section class="evaluation-ecosystem">
+        <h1>Evaluation method - ecosystem</h1>
+        <table>
+          <thead>
+          <th>Criteria</th>
+          <th>Evaluated?</th>
+          </thead>
+          <tbody>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Modules</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Package management</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>IDE integration</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Tooling</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Community</td>
+            <td><i class="cross"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Module authoring</td>
+            <td><i class="cross"></i></td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="evaluation-app">
+        <h1>Evaluation method - app needs</h1>
+        <table>
+          <thead>
+          <th>Criteria</th>
+          <th>Evaluated?</th>
+          </thead>
+          <tbody>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Routing</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Serialization</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>State management</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>HTTP</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Oauth</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>Logging</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in-then-semi-out">
+            <td>I18N</td>
+            <td><i class="check"></i></td>
+          </tr>
+          <tr class="fragment fade-in">
+            <td>L10N</td>
+            <td><i class="cross"></i></td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
     </section>
   </div>
 </div>
@@ -234,6 +419,9 @@
 <script src="prism/prism.js"></script>
 
 <script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    'left-trim': true,
+  });
   Reveal.initialize({
     controlsTutorial: false,
     slideNumber: 'c/t',

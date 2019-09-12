@@ -294,6 +294,16 @@ body {
   font-size: .7em;
   color: var(--grey); }
 
+.check::before {
+  content: '✓';
+  font-weight: bold;
+  color: green; }
+
+.cross::before {
+  content: '×';
+  font-weight: bold;
+  color: red; }
+
 .layout-title .header {
   display: flex;
   flex-direction: row;
@@ -347,11 +357,21 @@ body {
 .comprehensive .second-column {
   margin: auto; }
 
+.evaluation-bundle-size .comparison {
+  display: grid;
+  grid-template: 'left-col right-col'; }
+
+.evaluation-bundle-size .sub-title {
+  text-align: center; }
+
+.evaluation-bundle-size .language- {
+  font-size: 1rem; }
+
 @font-face {
   font-family: fira;
   src: local("Fira Code"); }
 
-pre > code[class*="language-"] {
+pre {
   font-family: fira;
   text-rendering: optimizeLegibility;
   font-variant-ligatures: normal;

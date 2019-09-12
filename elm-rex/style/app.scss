@@ -1,9 +1,11 @@
 @import './theme';
 @import './quotes';
+@import './evaluation';
 // Slides
 @import 'slides/title';
 @import 'slides/compiles-to-js';
 @import 'slides/comprehensive';
+@import 'slides/evaluation-bundle-size';
 
 @font-face {
   font-family: fira;
@@ -17,7 +19,7 @@
   font-variant-ligatures: normal;
 }
 
-pre > code[class*="language-"] {
+pre {
   @include fira;
   font-size: 1.1rem;
 }
