@@ -1,31 +1,26 @@
 @import './theme';
 @import './quotes';
 @import './evaluation';
+// Layouts
+@import './layouts/two_columns';
 // Slides
 @import 'slides/title';
+@import 'slides/currying-2';
 @import 'slides/compiles-to-js';
-@import 'slides/comprehensive';
+@import 'slides/from-no-red-ink';
 @import 'slides/evaluation-bundle-size';
 
-@font-face {
-  font-family: fira;
-  src: local("Fira Code");
-}
-
-@mixin fira {
-  //noinspection CssNoGenericFontName
-  font-family: fira;
+@mixin ligatures {
   text-rendering: optimizeLegibility;
   font-variant-ligatures: normal;
 }
 
 pre {
-  @include fira;
   font-size: 1.1rem;
 }
 
 .speaker-controls-notes {
-  @include fira;
+  @include ligatures;
 }
 
 html {

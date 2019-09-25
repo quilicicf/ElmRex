@@ -41,6 +41,16 @@
       </ul>
     </section>
     <section class="what-is-elm">
+      <section class="from-no-red-ink">
+        <h1>Developed at NoRedInk</h1>
+        <div class="two-columns">
+            <img src="./assets/noredink_logo.svg" alt="NoRedInk logo" class="column first-column logo">
+            <img src="./assets/evan_czaplicki.jpeg" alt="Evan Czaplicki" class="column first-column">
+        </div>
+        <aside class="notes">
+          <h2>Silicon valley company of 70</h2>
+        </aside>
+      </section>
       <section class="compiles-to-js">
         <h1>Elm Compiles to JS</h1>
         <div class="content">
@@ -68,10 +78,10 @@
           <li class="fragment fade-in-then-semi-out">No runtime errors</li>
           <li class="fragment fade-in-then-semi-out">Semver is imposed</li>
           <li class="fragment fade-in-then-semi-out">A helpful compiler</li>
-          <li class="fragment fade-in-then-semi-out">Functions are curry-able</li>
+          <li class="fragment fade-in">Functions are curry-able</li>
         </ul>
         <aside class="notes">
-          <h2>Idem potency: given same args => same results</h2>
+          <h2>Idem-potency: given same args => same results</h2>
           <h2>No global state + pure functions + immutable data => no side-effects</h2>
           <h2>If it compiles, it runs</h2>
           <h2>Strong type system => the compiler discovers semver info on its own</h2>
@@ -109,7 +119,7 @@
             <span class="fragment fade-in-then-semi-out">-- Let's curry it!</span>
 
             <span class="fragment fade-in-then-semi-out">add5 : Int -> Int</span>
-            <span class="fragment fade-in-then-semi-out">add5 value = value + 5</span>
+            <span class="fragment fade-in-then-semi-out">add5 = add 5</span>
 
             <span class="fragment fade-in-then-semi-out">-- Let's use it now!</span>
 
@@ -125,33 +135,40 @@
         <h1>Currying - real example</h1>
         <pre>
           <code class="language-elm">
-            coeff : Float
-            coeff = List.repeat precision "0"
-              |> String.join ""
-              |> (++) "1"
-              |> String.toFloat
-              |> Maybe.withDefault 1.0
+            progression = List.map .score filteredMemberScores
+              |> List.map .damage
+              |> List.indexedMap (\index damage -> [index, damage] )
+              |> computeLinearRegression 2
           </code>
         </pre>
       </section>
       <section class="type-system">
         <h1>A sound type-system</h1>
         <ul>
-          <li class="fragment fade-in-then-semi-out">Strong: the type is always known</li>
-          <li class="fragment fade-in-then-semi-out">Structural: the type is defined by it's structure</li>
-          <li class="fragment fade-in-then-semi-out">No null: places where values can be missing are known</li>
-          <li class="fragment fade-in">Implicit OR explicit: whatever fits the local needs</li>
+          <li class="fragment fade-in-then-semi-out">Strong</li>
+          <li class="fragment fade-in-then-semi-out">Structural</li>
+          <li class="fragment fade-in-then-semi-out">No null</li>
+          <li class="fragment fade-in">Implicit OR explicit</li>
         </ul>
+        <aside class="notes">
+          <h2>Strong: type always known</h2>
+          <h2>Structural: type defined by structure</h2>
+          <h2>No null: places where data can miss are known and handled with Maybe</h2>
+          <h2>Implicit or explicit: whatever fits the local needs</h2>
+        </aside>
       </section>
       <section class="records">
         <h1>Records</h1>
         <pre>
           <code class="language-elm">
             <span class="fragment fade-in-then-semi-out">type alias Person = { name: String, dob: Date }</span>
+
             <span class="fragment fade-in-then-semi-out">-- Explicit typing</span>
             <span class="fragment fade-in-then-semi-out">getAge : Person -> Int</span>
+
             <span class="fragment fade-in-then-semi-out">-- Implicit typing</span>
             <span class="fragment fade-in-then-semi-out">getAge { dob } = ...</span>
+
             <span class="fragment fade-in-then-semi-out">-- Semi-implicit typing</span>
             <span class="fragment fade-in">getAge : { whatever | dob: Date }</span>
           </code>
@@ -161,7 +178,10 @@
         <h1>Union types</h1>
         <pre>
           <code class="language-elm">
-            type Sorting = Ascending String | Descending String | Randomized
+            type Sorting
+              = Ascending String
+              | Descending String
+              | Randomized
 
             case sorting of
               Ascending column -> -- sort
@@ -179,20 +199,6 @@
             point = findCrossingPoint line1 line2
 
             abscissa = Tuple.first point
-          </code>
-        </pre>
-      </section>
-      <section class="maybe">
-        <h1>Maybe</h1>
-        <pre>
-          <code class="language-elm">
-            findCrossingPoint : Line -> Line -> Maybe ( Int, Int )
-
-            maybePoint = findCrossingPoint line1 line2
-
-            case maybePoint of
-              Just (abscissa, ordinate) -> -- do something
-              Nothing -> -- do something else
           </code>
         </pre>
       </section>
@@ -310,7 +316,7 @@
           </div>
           <div class="my-app">
             <h2>ep-stats</h2>
-              <pre class="sub-title">~2500 + ~800LoC => 150K => 47K</pre>
+            <pre class="sub-title">~2500 + ~800LoC => 150K => 47K</pre>
             <pre>
               <code class="language-">
                 dist/

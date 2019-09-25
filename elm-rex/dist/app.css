@@ -150,13 +150,13 @@ body {
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: monospace;
+  font-family: "fira";
   line-height: 1.2em;
   word-wrap: break-word;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); }
 
 .reveal code {
-  font-family: monospace;
+  font-family: "fira";
   text-transform: none; }
 
 .reveal pre code {
@@ -304,6 +304,20 @@ body {
   font-weight: bold;
   color: red; }
 
+.two-columns {
+  display: grid;
+  grid-template: 'first-column second-column' 1fr / 50% 50%;
+  height: 80vh;
+  width: 80vw;
+  margin: auto; }
+  .two-columns .column {
+    max-height: 100%;
+    max-width: 100%; }
+  .two-columns .first-column {
+    margin: auto; }
+  .two-columns .second-column {
+    margin: auto; }
+
 .layout-title .header {
   display: flex;
   flex-direction: row;
@@ -321,6 +335,11 @@ body {
 .layout-title .sub-title {
   font-size: .6em;
   color: #606c69; }
+
+.currying-2 pre {
+  max-width: 50em; }
+  .currying-2 pre code {
+    max-height: fit-content; }
 
 .compiles-to-js .content {
   display: flex;
@@ -340,22 +359,8 @@ body {
   height: auto;
   width: 30vw; }
 
-.comprehensive .two-columns {
-  display: grid;
-  grid-template: 'first-column second-column' 1fr / 50% 50%;
-  height: 80vh;
-  width: 80vw;
-  margin: auto; }
-
-.comprehensive .column {
-  max-height: 100%;
-  max-width: 100%; }
-
-.comprehensive .first-column {
-  margin: auto; }
-
-.comprehensive .second-column {
-  margin: auto; }
+.from-no-red-ink .logo {
+  width: 100%; }
 
 .evaluation-bundle-size .comparison {
   display: grid;
@@ -367,18 +372,10 @@ body {
 .evaluation-bundle-size .language- {
   font-size: 1rem; }
 
-@font-face {
-  font-family: fira;
-  src: local("Fira Code"); }
-
 pre {
-  font-family: fira;
-  text-rendering: optimizeLegibility;
-  font-variant-ligatures: normal;
   font-size: 1.1rem; }
 
 .speaker-controls-notes {
-  font-family: fira;
   text-rendering: optimizeLegibility;
   font-variant-ligatures: normal; }
 
