@@ -304,20 +304,6 @@ body {
   font-weight: bold;
   color: red; }
 
-.two-columns {
-  display: grid;
-  grid-template: 'first-column second-column' 1fr / 50% 50%;
-  height: 80vh;
-  width: 80vw;
-  margin: auto; }
-  .two-columns .column {
-    max-height: 100%;
-    max-width: 100%; }
-  .two-columns .first-column {
-    margin: auto; }
-  .two-columns .second-column {
-    margin: auto; }
-
 .layout-title .header {
   display: flex;
   flex-direction: row;
@@ -335,6 +321,23 @@ body {
 .layout-title .sub-title {
   font-size: .6em;
   color: #606c69; }
+
+.two-columns {
+  display: grid;
+  grid-template: 'first-column second-column' 1fr / 50% 50%;
+  height: 80vh;
+  width: 80vw;
+  margin: auto; }
+  .two-columns .column {
+    max-height: 100%;
+    max-width: 100%; }
+  .two-columns .first-column {
+    margin: auto; }
+  .two-columns .second-column {
+    margin: auto; }
+
+.layout-title-content .content {
+  height: 80vh; }
 
 .currying-2 pre {
   max-width: 50em; }
@@ -362,6 +365,17 @@ body {
 .from-no-red-ink .logo {
   width: 100%; }
 
+.evaluation-scale .scale {
+  display: grid;
+  grid-template: "worst worse not-good not-bad better best";
+  width: 80vw;
+  height: 10vh;
+  margin: auto; }
+
+.evaluation-scale .scale-element {
+  border: none;
+  background-color: #00000000; }
+
 .evaluation-bundle-size .comparison {
   display: grid;
   grid-template: 'left-col right-col'; }
@@ -372,8 +386,29 @@ body {
 .evaluation-bundle-size .language- {
   font-size: 1rem; }
 
+.evaluation-bundle-size .highlight {
+  color: var(--primary-color); }
+
+.the-three-stages-of-maybe .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .the-three-stages-of-maybe .item img {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 1rem;
+    height: 3em; }
+  .the-three-stages-of-maybe .item code {
+    font-size: .7em; }
+
 pre {
   font-size: 1.1rem; }
+
+:not(pre) code {
+  padding: .2em;
+  border-radius: .2em;
+  color: #e01e5a;
+  background-color: #272822; }
 
 .speaker-controls-notes {
   text-rendering: optimizeLegibility;

@@ -1,0 +1,14 @@
+.evaluation-scale {
+  .scale {
+    display: grid;
+    grid-template: "worst worse not-good not-bad better best";
+    width: 80vw;
+    height: 10vh;
+    margin: auto;
+  }
+
+  .scale-element {
+    border: none;
+    background-color: #00000000;
+  }
+}

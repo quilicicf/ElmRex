@@ -2,13 +2,16 @@
 @import './quotes';
 @import './evaluation';
 // Layouts
+@import './layouts/title';
 @import './layouts/two_columns';
+@import './layouts/title-content';
 // Slides
-@import 'slides/title';
-@import 'slides/currying-2';
-@import 'slides/compiles-to-js';
-@import 'slides/from-no-red-ink';
-@import 'slides/evaluation-bundle-size';
+@import './slides/currying-2';
+@import './slides/compiles-to-js';
+@import './slides/from-no-red-ink';
+@import './slides/evaluation-scale';
+@import './slides/evaluation-bundle-size';
+@import './slides/the-three-stages-of-maybe';
 
 @mixin ligatures {
   text-rendering: optimizeLegibility;
@@ -17,6 +20,15 @@
 
 pre {
   font-size: 1.1rem;
+}
+
+:not(pre) {
+  code {
+    padding: .2em;
+    border-radius: .2em;
+    color: #e01e5a;
+    background-color: #272822;
+  }
 }
 
 .speaker-controls-notes {

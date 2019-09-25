@@ -21,10 +21,11 @@
     document.getElementsByTagName('head')[ 0 ].appendChild(link);
   </script>
 </head>
+
 <body>
 <div class="reveal">
   <div class="slides">
-    <section class="layout-title">
+    <section class="title layout-title">
       <h1 class="header">
         <img class="logo" src="./assets/elm_logo.svg" alt="Elm logo">
         <span>Elm Rex</span>
@@ -43,9 +44,9 @@
     <section class="what-is-elm">
       <section class="from-no-red-ink">
         <h1>Developed at NoRedInk</h1>
-        <div class="two-columns">
-            <img src="./assets/noredink_logo.svg" alt="NoRedInk logo" class="column first-column logo">
-            <img src="./assets/evan_czaplicki.jpeg" alt="Evan Czaplicki" class="column first-column">
+        <div class="layout-two-columns">
+          <img src="./assets/noredink_logo.svg" alt="NoRedInk logo" class="column first-column logo">
+          <img src="./assets/evan_czaplicki.jpeg" alt="Evan Czaplicki" class="column first-column">
         </div>
         <aside class="notes">
           <h2>Silicon valley company of 70</h2>
@@ -65,7 +66,7 @@
       </section>
       <section class="comprehensive">
         <h1>Comprehensive</h1>
-        <div class="two-columns">
+        <div class="layout-two-columns">
           <img src="./assets/choices_stack_js.png" alt="Choices to do in JS" class="column second-column fragment fade-in">
           <img src="./assets/choices_stack_elm.png" alt="Choices to do in elm" class="column first-column fragment fade-in">
         </div>
@@ -226,24 +227,121 @@
         </aside>
       </section>
     </section>
-    <section>
-      <section class="the-app">
+    <section class="the-app">
+      <section class="the-app-overview">
         <h1>The app</h1>
         <img src="./assets/the_app.png" alt="App overview" class="fragment fade-in">
       </section>
       <section class="app-demo">
         <h1>Live demo!</h1>
+        <aside class="notes">
+          <h3>Gsheet</h3>
+          <h3>Welcome page + I18N (START_KEY|>‍﻿⁠⁠‌​‌﻿​‌‌​‌​‌‌‍⁠​‍⁠‌​‌‌‍⁠‌‌​⁠‌​‍﻿‌⁠‌​​‌‍‌‌﻿‌‌‍‌‌⁠⁠​﻿​​﻿‌‍‍‌﻿‍‌‌​‌⁠﻿⁠‌​‍﻿‍⁠‌​‌⁠﻿‌‌⁠‌‌​‌‌​‌﻿​​‌⁠‌​﻿⁠‌​‍﻿‌⁠‌​‍‌﻿‍‌⁠‍​​‍‍‍​﻿﻿‍‌﻿​﻿​​​⁠‌⁠﻿‌﻿﻿​﻿​‍‌⁠‍‍⁠‌‍‍‌﻿﻿​‌⁠‍⁠‌​‍​​⁠﻿‌​‌‌⁠‍‍‌﻿​⁠‌​﻿‌‌﻿﻿‌﻿​​﻿‍‌﻿​‌​‍​﻿﻿‌‍⁠‍‍⁠​‍​‌‌⁠‍⁠​‌‍‌​‍‍‌‍​‌​‍‌‍​​‍⁠‌﻿​​​​​‍‍⁠‌​‍﻿‍⁠‌​‌‌﻿‌⁠﻿​​​‌​﻿‌‍⁠‌‌﻿‌‍﻿⁠‌​‍﻿‌‌﻿​‌⁠⁠‌﻿‌‌‌​‍﻿﻿<|END_KEY)</h3>
+          <h3>Create a key</h3>
+          <h3>Login</h3>
+          <h3>View stats</h3>
+          <h3>Export time-travel</h3>
+        </aside>
       </section>
     </section>
-    <section>
+    <section class="rex">
       <section class="evaluation-process">
         <h1>Evaluation process</h1>
         <ul>
+          <li class="fragment fade-in-then-semi-out">My personal experience</li>
           <li class="fragment fade-in-then-semi-out">Language</li>
           <li class="fragment fade-in-then-semi-out">Ecosystem</li>
-          <li class="fragment fade-in-then-semi-out">App needs</li>
-          <li class="fragment fade-in">My personal experience</li>
+          <li class="fragment fade-in">App needs</li>
         </ul>
+      </section>
+      <section class="ramp-up layout-title-content">
+        <h1>I was told the ramp-up would hurt</h1>
+        <div class="content">
+          <img src="./assets/helms_deep.jpg" alt="Helm's deep">
+        </div>
+        <aside class="notes">
+          <h2>It is exceptionally hard to start from blank page</h2>
+          <h2>It is exceptionally easy to make the code evolve</h2>
+        </aside>
+      </section>
+      <section class="the-three-stages-of-maybe">
+        <h1>The three stages of
+          <del>grief</del>
+            maybe
+        </h1>
+        <div>
+          <ol>
+            <li class="fragment fade-in-then-semi-out">
+              <div class="item">
+                <span>So cool, I'll add them everywhere</span>
+                <img src="./assets/enjoyment.png" alt="Enjoyment">
+              </div>
+            </li>
+            <li class="fragment fade-in-then-semi-out">
+              <div class="item">
+                <span>Damn, so many&nbsp;</span>
+                <code>Maybe.withDefault</code>
+                <img src="./assets/scream.png" alt="Scream">
+              </div>
+            </li>
+            <li class="fragment fade-in">
+              <div class="item">
+                <span>The fewer maybes, the better!</span>
+                <img src="./assets/exterminator.png" alt="Exterminator">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="i-dont-fg-want-a-maybe layout-title-content">
+        <h1>I don't freaking want a maybe</h1>
+        <div class="content">
+          <img src="./assets/regex_hell.jpg" alt="One does not simply create a regex">
+        </div>
+        <aside class="notes">
+          <h2>Certaines solutions (elm-parser) sont très complexes</h2>
+        </aside>
+      </section>
+      <section class="evaluation-scale">
+        <h1>Evaluation scale</h1>
+        <div class="scale">
+          <div class="worst">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="5"
+                 src="./assets/scale_worst.png"
+                 alt="Scale worst">
+          </div>
+          <div class="worse">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="3"
+                 src="./assets/scale_worse.png"
+                 alt="Scale worse">
+          </div>
+          <div class="not-bad">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="1"
+                 src="./assets/scale_not_bad.png"
+                 alt="Scale not bad">
+          </div>
+          <div class="not-good">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="2"
+                 src="./assets/scale_not_good.png"
+                 alt="Scale not good">
+          </div>
+          <div class="better">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="4"
+                 src="./assets/scale_better.png"
+                 alt="Scale better">
+          </div>
+          <div class="best">
+            <img class="fragment fade-in scale-element"
+                 data-fragment-index="6"
+                 src="./assets/scale_best.png"
+                 alt="Scale best">
+          </div>
+        </div>
       </section>
       <section class="evaluation-language">
         <h1>Evaluation method - language</h1>
@@ -306,7 +404,7 @@
               <code class="language-">
                 hello
                 ├── [103K]  app.js
-                ├── <strong style="color: var(--primary-color);">[ 19K]  app.min.js</strong>
+                ├── <strong class="highlight">[ 19K]  app.min.js</strong>
                 ├── [7.2K]  app.min.js.gzip
                 ├── [ 233]  elm.json
                 ├── [ 275]  index.html
@@ -322,9 +420,9 @@
                 dist/
                 ├── [ 73K]  app.css
                 ├── [305K]  app.js
-                ├── <strong style="color: var(--primary-color);">[ 54K]  app.min.css</strong>
+                ├── <strong  class="highlight">[ 54K]  app.min.css</strong>
                 ├── [ 12K]  app.min.css.gzip
-                ├── <strong style="color: var(--primary-color);">[ 89K]  app.min.js</strong>
+                ├── <strong  class="highlight">[ 89K]  app.min.js</strong>
                 ├── [ 28K]  app.min.js.gzip
                 ├── [4.0K]  assets
                 │   ├── [130K]  fa-solid-900.eot
