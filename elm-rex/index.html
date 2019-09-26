@@ -35,10 +35,10 @@
     <section class="plan">
       <h1>Plan</h1>
       <ul>
-        <li class="fragment fade-in-then-semi-out">What is Elm</li>
-        <li class="fragment fade-in-then-semi-out">The app</li>
-        <li class="fragment fade-in-then-semi-out">How Elm fares</li>
-        <li class="fragment fade-in">Q/A</li>
+        <li>What is Elm</li>
+        <li>The app</li>
+        <li>How Elm fares</li>
+        <li>Q/A</li>
       </ul>
     </section>
     <section class="what-is-elm">
@@ -51,6 +51,16 @@
         <aside class="notes">
           <h2>Silicon valley company of 70</h2>
         </aside>
+      </section>
+      <section class="from-benevolent-dictator">
+        <h1>Benevolent dictator</h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Slow</li>
+          <li class="fragment fade-in-then-semi-out">Erratic roadmap</li>
+          <li class="fragment fade-in-then-semi-out">Coherent</li>
+          <li class="fragment fade-in-then-semi-out">Quality</li>
+          <li class="fragment fade-in">Strong opinions</li>
+        </ul>
       </section>
       <section class="compiles-to-js">
         <h1>Elm Compiles to JS</h1>
@@ -230,7 +240,7 @@
     <section class="the-app">
       <section class="the-app-overview">
         <h1>The app</h1>
-        <img src="./assets/the_app.png" alt="App overview" class="fragment fade-in">
+        <img src="./assets/the_app.png" alt="App overview">
       </section>
       <section class="app-demo">
         <h1>Live demo!</h1>
@@ -248,10 +258,10 @@
       <section class="evaluation-process">
         <h1>Evaluation process</h1>
         <ul>
-          <li class="fragment fade-in-then-semi-out">My personal experience</li>
-          <li class="fragment fade-in-then-semi-out">Language</li>
-          <li class="fragment fade-in-then-semi-out">Ecosystem</li>
-          <li class="fragment fade-in">App needs</li>
+          <li>My personal experience</li>
+          <li>Language</li>
+          <li>Ecosystem</li>
+          <li>App needs</li>
         </ul>
       </section>
       <section class="ramp-up layout-title-content">
@@ -317,16 +327,16 @@
                  src="./assets/scale_worse.png"
                  alt="Scale worse">
           </div>
-          <div class="not-bad">
+          <div class="bad">
             <img class="fragment fade-in scale-element"
                  data-fragment-index="1"
-                 src="./assets/scale_not_bad.png"
+                 src="assets/scale_bad.png"
                  alt="Scale not bad">
           </div>
-          <div class="not-good">
+          <div class="good">
             <img class="fragment fade-in scale-element"
                  data-fragment-index="2"
-                 src="./assets/scale_not_good.png"
+                 src="assets/scale_good.png"
                  alt="Scale not good">
           </div>
           <div class="better">
@@ -343,59 +353,40 @@
           </div>
         </div>
       </section>
-      <section class="evaluation-language">
-        <h1>Evaluation method - language</h1>
-        <table>
-          <thead>
-          <th>Criteria</th>
-          <th>Evaluated?</th>
-          </thead>
-          <tbody>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Syntax</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Productivity</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Upgrade-ability</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Readability</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Documentation</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Bundle size</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Cost of performance</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Debugging</td>
-            <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>Tests</td>
-            <td><i class="cross"></i></td>
-          </tr>
-          </tbody>
-        </table>
-
+      <section class="subjective">
+        <h1>Subjective language features</h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">
+            <span>Syntax</span>
+            <span><i class="scale scale-good"></i></span>
+          </li>
+          <li class="fragment fade-in-then-semi-out">
+            <span>Productivity</span>
+            <span><i class="scale scale-better"></i></span>
+          </li>
+          <li class="fragment fade-in-then-semi-out">
+            <span>Upgrade-ability</span>
+            <span><i class="scale scale-best"></i></span>
+          </li>
+          <li class="fragment fade-in-then-semi-out">
+            <span>Readability</span>
+            <span><i class="scale scale-good"></i></span>
+          </li>
+          <li class="fragment fade-in">
+            <span>Documentation</span>
+            <span><i class="scale scale-worse"></i></span>
+          </li>
+        </ul>
         <aside class="notes">
-          <h2>Warning: this part is mainly subjective</h2>
+          <h2>Syntax: HTML part, lambdas</h2>
+          <h2>Productivity: blank page vs evolutions</h2>
+          <h2>Upgrading: so fucking easy</h2>
+          <h2>Readability: decent</h2>
+          <h2>Documentation: TODOS, I have no PhD!</h2>
         </aside>
       </section>
       <section class="evaluation-bundle-size">
-        <h1>Bundle size</h1>
+        <h1>Bundle size <i class="scale scale-better"></i></h1>
         <div class="comparison">
           <div class="hello">
             <h2>Hello world</h2>
@@ -420,9 +411,9 @@
                 dist/
                 ├── [ 73K]  app.css
                 ├── [305K]  app.js
-                ├── <strong  class="highlight">[ 54K]  app.min.css</strong>
+                ├── <strong class="highlight">[ 54K]  app.min.css</strong>
                 ├── [ 12K]  app.min.css.gzip
-                ├── <strong  class="highlight">[ 89K]  app.min.js</strong>
+                ├── <strong class="highlight">[ 89K]  app.min.js</strong>
                 ├── [ 28K]  app.min.js.gzip
                 ├── [4.0K]  assets
                 │   ├── [130K]  fa-solid-900.eot
@@ -437,84 +428,365 @@
           </div>
         </div>
       </section>
-      <section class="evaluation-ecosystem">
-        <h1>Evaluation method - ecosystem</h1>
+      <section class="cost-of-performance">
+        <h1>Cost of performance <i class="scale scale-better"></i></h1>
+        <div class="two-columns">
+          <div class="column first-column">
+            <img src="./assets/light_house.png" alt="Light-house report">
+          </div>
+          <div class="column second-column">
+            <h2>Two techniques</h2>
+            <ol>
+              <li class="fragment fade-in-then-semi-out">Lazy</li>
+              <li class="fragment fade-in">Indexed</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="debugging">
+        <h1>Debugging <i class="scale scale-bad"></i></h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Time travel <i class="scale-best"></i></li>
+          <li class="fragment fade-in-then-semi-out">Logs <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Import/export broken! <i class="scale-worse"></i></li>
+          <li class="fragment fade-in">No break points <i class="scale-worst"></i></li>
+        </ul>
+        <aside class="notes">
+          <h2>Time travel: 80%</h2>
+          <h2>Logs: 18%</h2>
+        </aside>
+      </section>
+      <section class="evaluation-language">
+        <h1>Evaluation - language</h1>
         <table>
           <thead>
-          <th>Criteria</th>
-          <th>Evaluated?</th>
+          <tr>
+            <th>Criteria</th>
+            <th>Evaluated?</th>
+            <th>My opinion</th>
+          </tr>
           </thead>
           <tbody>
-          <tr class="fragment fade-in-then-semi-out">
+          <tr>
+            <td>Syntax</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-good"></i></td>
+          </tr>
+          <tr>
+            <td>Productivity</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-better"></i></td>
+          </tr>
+          <tr>
+            <td>Upgrade-ability</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-best"></i></td>
+          </tr>
+          <tr>
+            <td>Readability</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-good"></i></td>
+          </tr>
+          <tr>
+            <td>Documentation</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-worse"></i></td>
+          </tr>
+          <tr>
+            <td>Bundle size</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-better"></i></td>
+          </tr>
+          <tr>
+            <td>Cost of performance</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-better"></i></td>
+          </tr>
+          <tr>
+            <td>Debugging</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-bad"></i></td>
+          </tr>
+          <tr>
+            <td>Reliability</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-best"></i></td>
+          </tr>
+          <tr>
+            <td>Browsers API</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale scale-bad"></i></td>
+          </tr>
+          <tr>
+            <td>Tests</td>
+            <td><i class="cross"></i></td>
+            <td>?</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <aside class="notes">
+          <h2>Browsers API: lacking, should come in 0.20!</h2>
+        </aside>
+      </section>
+      <section class="modules">
+        <h1>Modules <i class="scale-good"></i></h1>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Quality <i class="scale-better"></i></li>
+          <li class="fragment fade-in">Approachability <i class="scale-bad"></i></li>
+        </ul>
+      </section>
+      <section class="package-management">
+        <h2>Package management <i class="scale-bad"></i></h2>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Installation <i class="scale-good"></i></li>
+          <li class="fragment fade-in-then-semi-out">Removal <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Update <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Tree <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Diff <i class="scale-better"></i></li>
+        </ul>
+        <pre class="fragment fade-in">
+          <code class="language-">
+            elm diff truqu/elm-base64 1.0.0 2.0.0
+            This is a <span class="cli-green">MAJOR</span> change.
+
+            <span class="cli-cyan">---- Base64 - MAJOR ----</span>
+
+                Changed:
+                  - encode : String -> Result String String
+                  + encode : String -> String
+          </code>
+        </pre>
+        <aside class="notes">
+          <h2>Installation: contributor name to input</h2>
+          <h2>Removal/upgrade: no help whatsoever</h2>
+          <h2>Tree: absent</h2>
+          <h2>Diff: see API changes in modules!</h2>
+        </aside>
+      </section>
+      <section class="evaluation-ecosystem">
+        <h1>Evaluation - ecosystem <i class="scale-good"></i></h1>
+        <table>
+          <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Evaluated?</th>
+            <th>My opinion</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
             <td>Modules</td>
             <td><i class="check"></i></td>
+            <td><i class="scale scale-good"></i></td>
           </tr>
-          <tr class="fragment fade-in-then-semi-out">
+          <tr>
             <td>Package management</td>
             <td><i class="check"></i></td>
+            <td><i class="scale scale-bad"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>IDE integration</td>
             <td><i class="check"></i></td>
+            <td><i class="scale scale-good"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>Tooling</td>
             <td><i class="check"></i></td>
+            <td><i class="scale scale-better"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>Community</td>
             <td><i class="cross"></i></td>
+            <td>?</td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>Module authoring</td>
             <td><i class="cross"></i></td>
+            <td>?</td>
           </tr>
           </tbody>
         </table>
+        <aside class="notes">
+          <h2>IDE: formatter, refactoring, support</h2>
+          <h2>Tooling: 300loc => 3* less than API Designer</h2>
+        </aside>
+      </section>
+      <section class="routing">
+        <h2>Routing <i class="scale-good"></i></h2>
+        <pre>
+          <code class="language-elm">
+            import Url exposing (Url)
+            import Url.Parser as Url exposing (Parser, (&lt;/>))
+
+            urlToPage : Url -> Page
+            urlToPage url =
+              url
+                |> Url.parse urlParser
+                |> Maybe.withDefault Index
+
+            urlParser : Parser (Page -> a) a
+            urlParser =
+              Url.oneOf
+                [ Url.map Index Url.top                   -- Matches /
+                , Url.map Cats (Url.s "cats")             -- Matches /cats
+                , Url.map User (Url.s "user" &lt;/> Url.int) -- Matches /user/{userId}
+                ]
+          </code>
+        </pre>
+      </section>
+      <section class="serialization">
+        <h2>Serialization <i class="scale-good"></i></h2>
+        <pre>
+          <code class="language-elm">
+            type alias StorageAppState =
+              { appKey: String
+              , accessToken: Maybe String
+              , selectedLanguage: String
+              }
+
+            storageAppStateDecoder : Decoder StorageAppState
+            storageAppStateDecoder =
+              Decode.succeed StorageAppState
+                |> Pipeline.optional "appKey" Decode.string ""
+                |> Pipeline.optional "accessToken" (maybe Decode.string) Nothing
+                |> Pipeline.optional "selectedLanguage" Decode.string "defaultLanguage"
+
+            decodeStorageAppState : Decode.Value -> StorageAppState
+            decodeStorageAppState appKeyAsJson =
+              case Decode.decodeValue storageAppStateDecoder appKeyAsJson of
+                Ok appState -> appState
+                Err _ -> StorageAppState "" Nothing "defaultLanguage"
+          </code>
+        </pre>
+        <aside class="notes">
+          <h2>Verbose but simple</h2>
+          <h2>Mind mixed arrays</h2>
+        </aside>
+      </section>
+      <section class="http">
+        <h2>HTTP <i class="scale-good"></i></h2>
+        <pre>
+          <code class="language-elm">
+            fetchAllStats : String -> String -> Cmd Msg
+            fetchAllStats sheetId accessToken = Http.request
+              { method = "GET"
+              , headers = [ createBearerHeader accessToken ]
+              , url = computeSheetDataUrl sheetId
+              , body = Http.emptyBody
+              , expect = Http.expectString (StatsMsg << GotStats)
+              , timeout = Nothing
+              , tracker = Nothing
+              }
+
+            update: Msg -> Model -> (Model, Cmd Msg)
+            update msg model =
+              case statsMsg of
+                GotStats httpResult ->
+                  case httpResult of
+                    Ok statsAsString -> updateStats statsAsString model eraseAppKeyFromStorage
+                    Err error ->
+                      case error of
+                        BadStatus status ->
+                          case status of
+                            401 -> ( model, load ( makeAuthorizationUrl model.baseUrl ) )
+                            403 -> ( model, load ( makeAuthorizationUrl model.baseUrl ) )
+                            _ -> ( model, Cmd.none )
+
+                        _ -> ( model, Cmd.none )
+          </code>
+        </pre>
+        <aside class="notes">
+          <h2>Verbose but simple</h2>
+          <h2>Mind mixed arrays</h2>
+        </aside>
       </section>
       <section class="evaluation-app">
         <h1>Evaluation method - app needs</h1>
         <table>
           <thead>
-          <th>Criteria</th>
-          <th>Evaluated?</th>
+          <tr>
+            <th>Criteria</th>
+            <th>Evaluated?</th>
+            <th>My opinion</th>
+          </tr>
           </thead>
           <tbody>
-          <tr class="fragment fade-in-then-semi-out">
+          <tr>
             <td>Routing</td>
             <td><i class="check"></i></td>
+            <td><i class="scale-good"></i></td>
           </tr>
-          <tr class="fragment fade-in-then-semi-out">
+          <tr>
             <td>Serialization</td>
             <td><i class="check"></i></td>
+            <td><i class="scale-good"></i></td>
+          </tr>
+          <tr>
+            <td>HTTP</td>
+            <td><i class="check"></i></td>
+            <td><i class="scale-good"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>State management</td>
             <td><i class="check"></i></td>
-          </tr>
-          <tr class="fragment fade-in-then-semi-out">
-            <td>HTTP</td>
-            <td><i class="check"></i></td>
+            <td><i class="scale-better"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>Oauth</td>
             <td><i class="check"></i></td>
+            <td><i class="scale-good"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>Logging</td>
             <td><i class="check"></i></td>
+            <td><i class="scale-bad"></i></td>
           </tr>
           <tr class="fragment fade-in-then-semi-out">
             <td>I18N</td>
             <td><i class="check"></i></td>
+            <td><i class="scale-good"></i></td>
           </tr>
           <tr class="fragment fade-in">
             <td>L10N</td>
             <td><i class="cross"></i></td>
+            <td>?</td>
           </tr>
           </tbody>
         </table>
+        <aside class="notes">
+          <h2>State management: annoying flat model, clear as hell tho</h2>
+          <h2>OAuth: as bad as anywhere else, needs JS for silent authentications</h2>
+          <h2>Logging: optional without runtime errors, OK for debugging, no JSON tho, unused variables</h2>
+          <h2>I18N: static and dynamic solutions, easy enough, verbose</h2>
+        </aside>
       </section>
+      <section class="back-to-promises">
+        <h1>Back to Elm's promises</h1>
+        <ol>
+          <li class="fragment fade-in">No runtime errors <i class="check"></i></li>
+          <li class="fragment fade-in">Good performance <i class="check"></i></li>
+          <li class="fragment fade-in">Easy maintenance <i class="check"></i><i class="check"></i><i class="check"></i><i class="check"></i></li>
+          <li class="fragment fade-in">Easy debugging <span class="not-so-sure">~</span></li>
+          <li class="fragment fade-in">Enjoyable <i class="check"></i></li>
+        </ol>
+      </section>
+      <section class="wrap-it-up">
+        <h1>Wrapping-up</h1>
+        <p class="fragment fade-in">I loved the experience</p>
+        <p class="fragment fade-in">I wouldn't use it in prod just yet</p>
+        <p class="fragment fade-in">I definitely would prefer it to JS on industrial apps</p>
+        <aside class="notes">
+          <h2>Not in prod because debug/browser compat is still lacking</h2>
+          <h2>Don't use it until it fully matches your needs</h2>
+        </aside>
+      </section>
+    </section>
+    <section class="questions layout-title-content">
+      <h1>Q/A</h1>
+      <div class="content">
+        <img src="./assets/breath_taking.jpeg" alt="You are breath taking">
+      </div>
     </section>
   </div>
 </div>

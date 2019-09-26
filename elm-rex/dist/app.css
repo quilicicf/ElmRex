@@ -304,6 +304,54 @@ body {
   font-weight: bold;
   color: red; }
 
+.scale-worst::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_worst.png"); }
+
+.scale-worse::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_worse.png"); }
+
+.scale-bad::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_bad.png"); }
+
+.scale-good::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_good.png"); }
+
+.scale-better::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_better.png"); }
+
+.scale-best::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 1em 1em;
+  background-image: url("../assets/scale_best.png"); }
+
 .layout-title .header {
   display: flex;
   flex-direction: row;
@@ -322,18 +370,18 @@ body {
   font-size: .6em;
   color: #606c69; }
 
-.two-columns {
+.layout-two-columns {
   display: grid;
   grid-template: 'first-column second-column' 1fr / 50% 50%;
   height: 80vh;
   width: 80vw;
   margin: auto; }
-  .two-columns .column {
+  .layout-two-columns .column {
     max-height: 100%;
     max-width: 100%; }
-  .two-columns .first-column {
+  .layout-two-columns .first-column {
     margin: auto; }
-  .two-columns .second-column {
+  .layout-two-columns .second-column {
     margin: auto; }
 
 .layout-title-content .content {
@@ -367,7 +415,7 @@ body {
 
 .evaluation-scale .scale {
   display: grid;
-  grid-template: "worst worse not-good not-bad better best";
+  grid-template: "worst worse bad good better best";
   width: 80vw;
   height: 10vh;
   margin: auto; }
@@ -375,6 +423,12 @@ body {
 .evaluation-scale .scale-element {
   border: none;
   background-color: #00000000; }
+
+.cost-of-performance .first-column {
+  margin: 0; }
+
+.cost-of-performance img {
+  width: 100%; }
 
 .evaluation-bundle-size .comparison {
   display: grid;
@@ -403,6 +457,8 @@ body {
 
 pre {
   font-size: 1.1rem; }
+  pre code {
+    max-height: unset !important; }
 
 :not(pre) code {
   padding: .2em;
@@ -416,5 +472,14 @@ pre {
 
 html {
   color: var(--white); }
+
+.not-so-sure {
+  color: orange; }
+
+.cli-green {
+  color: green; }
+
+.cli-cyan {
+  color: cyan; }
 
 /*# sourceMappingURL=app.css.map */

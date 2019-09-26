@@ -1,7 +1,7 @@
 .evaluation-scale {
   .scale {
     display: grid;
-    grid-template: "worst worse not-good not-bad better best";
+    grid-template: "worst worse bad good better best";
     width: 80vw;
     height: 10vh;
     margin: auto;

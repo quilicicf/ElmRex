@@ -3,13 +3,14 @@
 @import './evaluation';
 // Layouts
 @import './layouts/title';
-@import './layouts/two_columns';
+@import './layouts/two-columns';
 @import './layouts/title-content';
 // Slides
 @import './slides/currying-2';
 @import './slides/compiles-to-js';
 @import './slides/from-no-red-ink';
 @import './slides/evaluation-scale';
+@import './slides/cost-of-performance';
 @import './slides/evaluation-bundle-size';
 @import './slides/the-three-stages-of-maybe';
 
@@ -20,6 +21,10 @@
 
 pre {
   font-size: 1.1rem;
+
+  code {
+    max-height: unset !important;
+  }
 }
 
 :not(pre) {
@@ -37,4 +42,16 @@ pre {
 
 html {
   color: var(--white);
+}
+
+.not-so-sure {
+  color: orange;
+}
+
+.cli-green {
+  color: green;
+}
+
+.cli-cyan {
+  color: cyan;
 }

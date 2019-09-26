@@ -9,3 +9,43 @@
   font-weight: bold;
   color: red;
 }
+
+$scale-size: 1em;
+
+@mixin scale($size: 1em) {
+  content: '';
+  display: inline-block;
+  height: $size;
+  width: $size;
+  background-size: $scale-size $scale-size;
+}
+
+.scale-worst::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_worst.png');
+}
+
+.scale-worse::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_worse.png');
+}
+
+.scale-bad::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_bad.png');
+}
+
+.scale-good::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_good.png');
+}
+
+.scale-better::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_better.png');
+}
+
+.scale-best::before {
+  @include scale($scale-size);
+  background-image: url('../assets/scale_best.png');
+}
