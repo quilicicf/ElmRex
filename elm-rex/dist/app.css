@@ -411,6 +411,8 @@ body {
   width: 30vw; }
 
 .from-no-red-ink .logo {
+  border: none;
+  background-color: #00000000;
   width: 100%; }
 
 .evaluation-scale .scale {
