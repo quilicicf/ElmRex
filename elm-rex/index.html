@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,6 +7,7 @@
   <title>ELM Rex</title>
 
   <!--  <link rel="stylesheet" href="../css/reset.css">-->
+  <link rel="icon" href="assets/elm_logo.png">
   <link rel="stylesheet" href="../css/reveal.css">
 
   <link rel="stylesheet" href="prism/prism.css">
@@ -14,7 +15,7 @@
 
   <!-- Printing and PDF exports -->
   <script>
-    var link = document.createElement('link');
+    let link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
     link.href = window.location.search.match(/print-pdf/gi) ? '../css/print/pdf.css' : '../css/print/paper.css';
@@ -25,14 +26,22 @@
 <body>
 <div class="reveal">
   <div class="slides">
-    <section class="title layout-title">
+    <section class="title layout-title" data-timing="60">
       <h1 class="header">
         <img class="logo" src="./assets/elm_logo.svg" alt="Elm logo">
         <span>Elm Rex</span>
       </h1>
       <p class="sub-title">An experience with mixed results</p>
+      <aside class="notes">
+        <p>Why</p>
+        <ul>
+          <li>Bored of JS and it's un-trustworthiness</li>
+          <li>Flux pattern is interesting</li>
+          <li>Wanted to test functional programming for real</li>
+        </ul>
+      </aside>
     </section>
-    <section class="plan">
+    <section class="plan" data-timing="30">
       <h1>Plan</h1>
       <ul>
         <li>What is Elm</li>
@@ -42,27 +51,35 @@
       </ul>
     </section>
     <section class="what-is-elm">
-      <section class="from-no-red-ink">
+      <section class="from-no-red-ink" data-timing="30">
         <h1>Developed at NoRedInk</h1>
         <div class="layout-two-columns">
           <img src="./assets/noredink_logo.svg" alt="NoRedInk logo" class="column first-column logo">
           <img src="./assets/evan_czaplicki.jpeg" alt="Evan Czaplicki" class="column first-column">
         </div>
         <aside class="notes">
-          <h2>Silicon valley company of 70</h2>
+          <p>Silicon valley company of 70</p>
+          <p>Write tools for students developed in elm</p>
         </aside>
       </section>
-      <section class="from-benevolent-dictator">
+      <section class="from-benevolent-dictator" data-timing="60">
         <h1>Benevolent dictator</h1>
         <ul>
-          <li class="fragment fade-in-then-semi-out">Slow</li>
-          <li class="fragment fade-in-then-semi-out">Erratic roadmap</li>
-          <li class="fragment fade-in-then-semi-out">Coherent</li>
-          <li class="fragment fade-in-then-semi-out">Quality</li>
+          <li class="fragment fade-in-then-semi-out">Slow <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Erratic road-map <i class="scale-bad"></i></li>
+          <li class="fragment fade-in-then-semi-out">Coherent <i class="scale-good"></i></li>
+          <li class="fragment fade-in-then-semi-out">Quality <i class="scale-good"></i></li>
           <li class="fragment fade-in">Strong opinions</li>
         </ul>
+        <aside class="notes">
+          <p>Slow: can take two years between releases</p>
+          <p>Erratic: driven by feedback, bulked depending on analysis</p>
+          <p>Coherent: no info lost in communication mess</p>
+          <p>Quality: known and managed contributors</p>
+          <p>Strong opinions: you like it or not</p>
+        </aside>
       </section>
-      <section class="compiles-to-js">
+      <section class="compiles-to-js" data-timing="60">
         <h1>Elm Compiles to JS</h1>
         <div class="content">
           <img class="logo" src="./assets/elm_logo.svg" alt="Elm logo">
@@ -70,18 +87,18 @@
           <img class="logo" src="assets/js_logo.svg" alt="Elm logo">
         </div>
         <aside class="notes">
-          <h2>Elm is a language to write front-end applications</h2>
-          <h2>Compiles to ES3</h2>
+          <p>Elm is a language to write front-end applications</p>
+          <p>Compiles to ES3</p>
         </aside>
       </section>
-      <section class="comprehensive">
+      <section class="comprehensive" data-timing="120">
         <h1>Comprehensive</h1>
         <div class="layout-two-columns">
           <img src="./assets/choices_stack_js.png" alt="Choices to do in JS" class="column second-column fragment fade-in">
           <img src="./assets/choices_stack_elm.png" alt="Choices to do in elm" class="column first-column fragment fade-in">
         </div>
       </section>
-      <section class="functional-language">
+      <section class="functional-language" data-timing="140">
         <h1>A functional language</h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">Functions are idempotent</li>
@@ -92,15 +109,16 @@
           <li class="fragment fade-in">Functions are curry-able</li>
         </ul>
         <aside class="notes">
-          <h2>Idem-potency: given same args => same results</h2>
-          <h2>No global state + pure functions + immutable data => no side-effects</h2>
-          <h2>If it compiles, it runs</h2>
-          <h2>Strong type system => the compiler discovers semver info on its own</h2>
-          <h2>The compiler knows lots about your program</h2>
-          <h2>Currying => composition</h2>
+          <p>The 1st class citizen is the function, the aim is to reason with them easily</p>
+          <p>Idem-potency: given same args => same results</p>
+          <p>Pure functions + immutable data => no side-effects</p>
+          <p>If it compiles, it runs</p>
+          <p>Strong type system => the compiler discovers semver info on its own</p>
+          <p>The compiler knows lots about your program</p>
+          <p>Currying => composition</p>
         </aside>
       </section>
-      <section class="helpful-compiler">
+      <section class="helpful-compiler" data-timing="60">
         <h1>Helpful compiler</h1>
         <div>
           <img src="./assets/helpful_compiler.png" alt="Helpful compiler error messages">
@@ -109,7 +127,7 @@
           <img src="./assets/helpful_compiler_2.png" alt="Helpful compiler error messages 2">
         </div>
       </section>
-      <section class="currying">
+      <section class="currying" data-timing="30">
         <h1>Currying</h1>
         <p class="quote">
           <span class="quote-content">
@@ -120,11 +138,11 @@
           <span class="quote-author">Wikipedia</span>
         </p>
       </section>
-      <section class="currying-2">
+      <section class="currying-2" data-timing="140">
         <h1>Currying</h1>
         <pre>
           <code class="language-elm">
-            <span class="fragment fade-in-then-semi-out">add : Int -> Int -> Int</span>
+            <span class="fragment fade-in-then-semi-out">add : Int</span><span class="fragment fade-in-then-semi-out"> -> Int</span><span class="fragment fade-in-then-semi-out"> -> Int</span>
             <span class="fragment fade-in-then-semi-out">add number1 number2 = number1 + number2</span>
 
             <span class="fragment fade-in-then-semi-out">-- Let's curry it!</span>
@@ -142,18 +160,19 @@
           </code>
         </pre>
       </section>
-      <section class="currying-3">
+      <section class="currying-3" data-timing="120">
         <h1>Currying - real example</h1>
         <pre>
           <code class="language-elm">
-            progression = List.map .score filteredMemberScores
+            progression : LinearRegression
+            progression = List.map .score memberScores
               |> List.map .damage
               |> List.indexedMap (\index damage -> [index, damage] )
               |> computeLinearRegression 2
           </code>
         </pre>
       </section>
-      <section class="type-system">
+      <section class="type-system" data-timing="120">
         <h1>A sound type-system</h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">Strong</li>
@@ -162,13 +181,13 @@
           <li class="fragment fade-in">Implicit OR explicit</li>
         </ul>
         <aside class="notes">
-          <h2>Strong: type always known</h2>
-          <h2>Structural: type defined by structure</h2>
-          <h2>No null: places where data can miss are known and handled with Maybe</h2>
-          <h2>Implicit or explicit: whatever fits the local needs</h2>
+          <p>Strong: type always known</p>
+          <p>Structural: type defined by structure</p>
+          <p>No null: places where data can miss are known and handled with Maybe</p>
+          <p>Implicit or explicit: whatever fits the local needs</p>
         </aside>
       </section>
-      <section class="records">
+      <section class="records" data-timing="120">
         <h1>Records</h1>
         <pre>
           <code class="language-elm">
@@ -185,7 +204,7 @@
           </code>
         </pre>
       </section>
-      <section class="union-types">
+      <section class="union-types" data-timing="60">
         <h1>Union types</h1>
         <pre>
           <code class="language-elm">
@@ -201,7 +220,7 @@
           </code>
         </pre>
       </section>
-      <section class="tuples">
+      <section class="tuples" data-timing="60">
         <h1>Tuples</h1>
         <pre>
           <code class="language-elm">
@@ -213,17 +232,20 @@
           </code>
         </pre>
       </section>
-      <section class="flux">
+      <section class="flux" data-timing="140">
         <h1>The flux pattern</h1>
         <p class="fragment fade-in">Was formerly known as <em>event sourcing</em> before Facebook "renamed" it.</p>
         <p class="fragment fade-in">Uni-directional data flow</p>
         <img class="fragment fade-in" src="./assets/flux.png" alt="Flux architecture">
 
         <aside class="notes">
-          <h2>Virtual DOM</h2>
+          <p>The app is everything above elm runtime</p>
+          <p>The elm runtime contains ALL the non-pure functions</p>
+          <p>The DOM is generated by elm via virtual DOM and diffing</p>
+          <p>The diff is way more powerful in elm than JS because of elm's guarantees</p>
         </aside>
       </section>
-      <section class="recap-promises">
+      <section class="recap-promises" data-timing="60">
         <h1>Recap of elm's promises</h1>
         <ol>
           <li class="fragment fade-in">No runtime errors</li>
@@ -233,48 +255,58 @@
           <li class="fragment fade-in">Enjoyable</li>
         </ol>
         <aside class="notes">
-          <h2>Performance => assets size + optimizations</h2>
+          <p>Performance => assets size + optimizations</p>
         </aside>
       </section>
     </section>
     <section class="the-app">
-      <section class="the-app-overview">
+      <section class="the-app-overview" data-timing="120">
         <h1>The app</h1>
-        <img src="./assets/the_app.png" alt="App overview">
+        <img src="./assets/the_app.png" alt="App overview" class="fragment fade-in">
+        <aside class="notes">
+          <p>Excuse app to test elm in real conditions</p>
+          <p>For a game I play</p>
+          <p>Became an enormous project, later with CSS</p>
+
+          <p>Stats are in a spreadsheet in pre-determined format</p>
+          <p>Users configure the app to fetch the right sheet</p>
+          <p>Users log to Google to have access to it</p>
+          <p>App fetches the stats and displays them in a nice way with filtering etc...</p>
+        </aside>
       </section>
-      <section class="app-demo">
+      <section class="app-demo" data-timing="240">
         <h1>Live demo!</h1>
         <aside class="notes">
-          <h3>Gsheet</h3>
-          <h3>Welcome page + I18N (START_KEY|>‍﻿⁠⁠‌​‌﻿​‌‌​‌​‌‌‍⁠​‍⁠‌​‌‌‍⁠‌‌​⁠‌​‍﻿‌⁠‌​​‌‍‌‌﻿‌‌‍‌‌⁠⁠​﻿​​﻿‌‍‍‌﻿‍‌‌​‌⁠﻿⁠‌​‍﻿‍⁠‌​‌⁠﻿‌‌⁠‌‌​‌‌​‌﻿​​‌⁠‌​﻿⁠‌​‍﻿‌⁠‌​‍‌﻿‍‌⁠‍​​‍‍‍​﻿﻿‍‌﻿​﻿​​​⁠‌⁠﻿‌﻿﻿​﻿​‍‌⁠‍‍⁠‌‍‍‌﻿﻿​‌⁠‍⁠‌​‍​​⁠﻿‌​‌‌⁠‍‍‌﻿​⁠‌​﻿‌‌﻿﻿‌﻿​​﻿‍‌﻿​‌​‍​﻿﻿‌‍⁠‍‍⁠​‍​‌‌⁠‍⁠​‌‍‌​‍‍‌‍​‌​‍‌‍​​‍⁠‌﻿​​​​​‍‍⁠‌​‍﻿‍⁠‌​‌‌﻿‌⁠﻿​​​‌​﻿‌‍⁠‌‌﻿‌‍﻿⁠‌​‍﻿‌‌﻿​‌⁠⁠‌﻿‌‌‌​‍﻿﻿<|END_KEY)</h3>
-          <h3>Create a key</h3>
-          <h3>Login</h3>
-          <h3>View stats</h3>
-          <h3>Export time-travel</h3>
+          <p>Google sheet</p>
+          <p>Welcome page + I18N (<code>START_KEY|>‍﻿⁠⁠‌​‌﻿​‌‌​‌​‌‌‍⁠​‍⁠‌​‌‌‍⁠‌‌​⁠‌​‍﻿‌⁠‌​​‌‍‌‌﻿‌‌‍‌‌⁠⁠​﻿​​﻿‌‍‍‌﻿‍‌‌​‌⁠﻿⁠‌​‍﻿‍⁠‌​‌⁠﻿‌‌⁠‌‌​‌‌​‌﻿​​‌⁠‌​﻿⁠‌​‍﻿‌⁠‌​‍‌﻿‍‌⁠‍​​‍‍‍​﻿﻿‍‌﻿​﻿​​​⁠‌⁠﻿‌﻿﻿​﻿​‍‌⁠‍‍⁠‌‍‍‌﻿﻿​‌⁠‍⁠‌​‍​​⁠﻿‌​‌‌⁠‍‍‌﻿​⁠‌​﻿‌‌﻿﻿‌﻿​​﻿‍‌﻿​‌​‍​﻿﻿‌‍⁠‍‍⁠​‍​‌‌⁠‍⁠​‌‍‌​‍‍‌‍​‌​‍‌‍​​‍⁠‌﻿​​​​​‍‍⁠‌​‍﻿‍⁠‌​‌‌﻿‌⁠﻿​​​‌​﻿‌‍⁠‌‌﻿‌‍﻿⁠‌​‍﻿‌‌﻿​‌⁠⁠‌﻿‌‌‌​‍﻿﻿<|END_KEY</code>)</p>
+          <p>Create a key</p>
+          <p>Login</p>
+          <p>View stats</p>
+          <p>Time-travel</p>
         </aside>
       </section>
     </section>
     <section class="rex">
-      <section class="evaluation-process">
+      <section class="evaluation-process" data-timing="60">
         <h1>Evaluation process</h1>
         <ul>
-          <li>My personal experience</li>
-          <li>Language</li>
-          <li>Ecosystem</li>
-          <li>App needs</li>
+          <li class="fragment fade-in-then-semi-out">My personal experience</li>
+          <li class="fragment fade-in-then-semi-out">Language</li>
+          <li class="fragment fade-in-then-semi-out">Ecosystem</li>
+          <li class="fragment fade-in">App needs</li>
         </ul>
       </section>
-      <section class="ramp-up layout-title-content">
+      <section class="ramp-up layout-title-content" data-timing="60">
         <h1>I was told the ramp-up would hurt</h1>
         <div class="content">
           <img src="./assets/helms_deep.jpg" alt="Helm's deep">
         </div>
         <aside class="notes">
-          <h2>It is exceptionally hard to start from blank page</h2>
-          <h2>It is exceptionally easy to make the code evolve</h2>
+          <p>It is exceptionally hard to start from blank page</p>
+          <p>It is exceptionally easy to make the code evolve</p>
         </aside>
       </section>
-      <section class="the-three-stages-of-maybe">
+      <section class="the-three-stages-of-maybe" data-timing="60">
         <h1>The three stages of
           <del>grief</del>
             maybe
@@ -303,16 +335,17 @@
           </ol>
         </div>
       </section>
-      <section class="i-dont-fg-want-a-maybe layout-title-content">
+      <section class="i-dont-fg-want-a-maybe layout-title-content" data-timing="60">
         <h1>I don't freaking want a maybe</h1>
         <div class="content">
           <img src="./assets/regex_hell.jpg" alt="One does not simply create a regex">
         </div>
         <aside class="notes">
-          <h2>Certaines solutions (elm-parser) sont très complexes</h2>
+          <p>Some solutions (elm-parser) are very complex</p>
+          <p>Even the community does that (OAuth token)</p>
         </aside>
       </section>
-      <section class="evaluation-scale">
+      <section class="evaluation-scale" data-timing="60">
         <h1>Evaluation scale</h1>
         <div class="scale">
           <div class="worst">
@@ -353,7 +386,7 @@
           </div>
         </div>
       </section>
-      <section class="subjective">
+      <section class="subjective" data-timing="120">
         <h1>Subjective language features</h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">
@@ -378,18 +411,18 @@
           </li>
         </ul>
         <aside class="notes">
-          <h2>Syntax: HTML part, lambdas</h2>
-          <h2>Productivity: blank page vs evolutions</h2>
-          <h2>Upgrading: so fucking easy</h2>
-          <h2>Readability: decent</h2>
-          <h2>Documentation: TODOS, I have no PhD!</h2>
+          <p>Syntax: HTML part, lambdas</p>
+          <p>Productivity: blank page vs evolutions</p>
+          <p>Upgrading: so fucking easy</p>
+          <p>Readability: decent</p>
+          <p>Documentation: TODOs, I have no PhD!</p>
         </aside>
       </section>
-      <section class="evaluation-bundle-size">
+      <section class="evaluation-bundle-size" data-timing="120">
         <h1>Bundle size <i class="scale scale-better"></i></h1>
         <div class="comparison">
           <div class="hello">
-            <h2>Hello world</h2>
+            <p>Hello world</p>
             <pre class="sub-title">~50LoC => 19K => 7K</pre>
             <pre>
               <code class="language-">
@@ -404,7 +437,7 @@
             </pre>
           </div>
           <div class="my-app">
-            <h2>ep-stats</h2>
+            <p>ep-stats</p>
             <pre class="sub-title">~2500 + ~800LoC => 150K => 47K</pre>
             <pre>
               <code class="language-">
@@ -428,14 +461,14 @@
           </div>
         </div>
       </section>
-      <section class="cost-of-performance">
+      <section class="cost-of-performance" data-timing="120">
         <h1>Cost of performance <i class="scale scale-better"></i></h1>
         <div class="layout-two-columns">
           <div class="column first-column">
             <img src="./assets/light_house.png" alt="Light-house report">
           </div>
           <div class="column second-column">
-            <h2>Two techniques</h2>
+            <p>Two techniques</p>
             <ol>
               <li class="fragment fade-in-then-semi-out">Lazy</li>
               <li class="fragment fade-in">Indexed</li>
@@ -443,7 +476,7 @@
           </div>
         </div>
       </section>
-      <section class="debugging">
+      <section class="debugging" data-timing="120">
         <h1>Debugging <i class="scale scale-bad"></i></h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">Time travel <i class="scale-best"></i></li>
@@ -452,11 +485,11 @@
           <li class="fragment fade-in">No break points <i class="scale-worst"></i></li>
         </ul>
         <aside class="notes">
-          <h2>Time travel: 80%</h2>
-          <h2>Logs: 18%</h2>
+          <p>Time travel: 80%</p>
+          <p>Logs: 18%</p>
         </aside>
       </section>
-      <section class="evaluation-language">
+      <section class="evaluation-language" data-timing="120">
         <h1>Evaluation - language</h1>
         <table>
           <thead>
@@ -526,18 +559,18 @@
         </table>
 
         <aside class="notes">
-          <h2>Browsers API: lacking, should come in 0.20!</h2>
+          <p>Browsers API: lacking, should come in 0.20!</p>
         </aside>
       </section>
-      <section class="modules">
+      <section class="modules" data-timing="60">
         <h1>Modules <i class="scale-good"></i></h1>
         <ul>
           <li class="fragment fade-in-then-semi-out">Quality <i class="scale-better"></i></li>
           <li class="fragment fade-in">Approachability <i class="scale-bad"></i></li>
         </ul>
       </section>
-      <section class="package-management">
-        <h2>Package management <i class="scale-bad"></i></h2>
+      <section class="package-management" data-timing="120">
+        <p>Package management <i class="scale-bad"></i></p>
         <ul>
           <li class="fragment fade-in-then-semi-out">Installation <i class="scale-good"></i></li>
           <li class="fragment fade-in-then-semi-out">Removal <i class="scale-bad"></i></li>
@@ -558,13 +591,13 @@
           </code>
         </pre>
         <aside class="notes">
-          <h2>Installation: contributor name to input</h2>
-          <h2>Removal/upgrade: no help whatsoever</h2>
-          <h2>Tree: absent</h2>
-          <h2>Diff: see API changes in modules!</h2>
+          <p>Installation: contributor name to input</p>
+          <p>Removal/upgrade: no help whatsoever</p>
+          <p>Tree: absent</p>
+          <p>Diff: see API changes in modules!</p>
         </aside>
       </section>
-      <section class="evaluation-ecosystem">
+      <section class="evaluation-ecosystem" data-timing="120">
         <h1>Evaluation - ecosystem <i class="scale-good"></i></h1>
         <table>
           <thead>
@@ -608,12 +641,12 @@
           </tbody>
         </table>
         <aside class="notes">
-          <h2>IDE: formatter, refactoring, support</h2>
-          <h2>Tooling: 300loc => 3* less than API Designer</h2>
+          <p>IDE: formatter, refactoring, support</p>
+          <p>Tooling: 300loc => 3* less than API Designer</p>
         </aside>
       </section>
-      <section class="routing">
-        <h2>Routing <i class="scale-good"></i></h2>
+      <section class="routing" data-timing="120">
+        <p>Routing <i class="scale-good"></i></p>
         <pre>
           <code class="language-elm">
             import Url exposing (Url)
@@ -635,8 +668,8 @@
           </code>
         </pre>
       </section>
-      <section class="serialization">
-        <h2>Serialization <i class="scale-good"></i></h2>
+      <section class="serialization" data-timing="120">
+        <p>Serialization <i class="scale-good"></i></p>
         <pre>
           <code class="language-elm">
             type alias StorageAppState =
@@ -660,12 +693,12 @@
           </code>
         </pre>
         <aside class="notes">
-          <h2>Verbose but simple</h2>
-          <h2>Mind mixed arrays</h2>
+          <p>Verbose but simple</p>
+          <p>Mind mixed arrays</p>
         </aside>
       </section>
-      <section class="http">
-        <h2>HTTP <i class="scale-good"></i></h2>
+      <section class="http" data-timing="120">
+        <p>HTTP <i class="scale-good"></i></p>
         <pre>
           <code class="language-elm">
             fetchAllStats : String -> String -> Cmd Msg
@@ -697,11 +730,11 @@
           </code>
         </pre>
         <aside class="notes">
-          <h2>Verbose but simple</h2>
-          <h2>Mind mixed arrays</h2>
+          <p>Verbose but simple</p>
+          <p>Mind mixed arrays</p>
         </aside>
       </section>
-      <section class="evaluation-app">
+      <section class="evaluation-app" data-timing="120">
         <h1>Evaluation method - app needs</h1>
         <table>
           <thead>
@@ -755,13 +788,13 @@
           </tbody>
         </table>
         <aside class="notes">
-          <h2>State management: annoying flat model, clear as hell tho</h2>
-          <h2>OAuth: as bad as anywhere else, needs JS for silent authentications</h2>
-          <h2>Logging: optional without runtime errors, OK for debugging, no JSON tho, unused variables</h2>
-          <h2>I18N: static and dynamic solutions, easy enough, verbose</h2>
+          <p>State management: annoying flat model, clear as hell tho</p>
+          <p>OAuth: as bad as anywhere else, needs JS for silent authentications</p>
+          <p>Logging: optional without runtime errors, OK for debugging, no JSON tho, unused variables</p>
+          <p>I18N: static and dynamic solutions, easy enough, verbose</p>
         </aside>
       </section>
-      <section class="back-to-promises">
+      <section class="back-to-promises" data-timing="120">
         <h1>Back to Elm's promises</h1>
         <ol>
           <li class="fragment fade-in">No runtime errors <i class="check"></i></li>
@@ -771,18 +804,18 @@
           <li class="fragment fade-in">Enjoyable <i class="check"></i></li>
         </ol>
       </section>
-      <section class="wrap-it-up">
+      <section class="wrap-it-up" data-timing="60">
         <h1>Wrapping-up</h1>
         <p class="fragment fade-in">I loved the experience</p>
         <p class="fragment fade-in">I wouldn't use it in prod just yet</p>
         <p class="fragment fade-in">I definitely would prefer it to JS on industrial apps</p>
         <aside class="notes">
-          <h2>Not in prod because debug/browser compat is still lacking</h2>
-          <h2>Don't use it until it fully matches your needs</h2>
+          <p>Not in prod because debug/browser compat is still lacking</p>
+          <p>Don't use it until it fully matches your needs</p>
         </aside>
       </section>
     </section>
-    <section class="questions layout-title-content">
+    <section class="questions layout-title-content" data-timing="300">
       <h1>Q/A</h1>
       <div class="content">
         <img src="./assets/breath_taking.jpeg" alt="You are breath taking">
